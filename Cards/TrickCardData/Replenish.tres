@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardConfig" load_steps=2 format=3 uid="uid://dim2u5dpc35r8"]
+
+[ext_resource type="Script" path="res://Cards/card_config.gd" id="1_mvagk"]
+
+[resource]
+resource_name = "Replenish"
+script = ExtResource("1_mvagk")
+card_type = 1
+pixel_size = 0.0025
+image_offset = Vector2(0, 0)
+card_name = "Replenish"
+card_description = "Restore one health charge."
+card_value = 2

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardConfig" load_steps=3 format=3 uid="uid://brxc3lo57havh"]
+
+[ext_resource type="Script" path="res://Cards/card_config.gd" id="1_gctbi"]
+[ext_resource type="Texture2D" uid="uid://coi3nv0y56gvc" path="res://icon.svg" id="1_gjmd2"]
+
+[resource]
+resource_name = "Scissors"
+script = ExtResource("1_gctbi")
+card_type = 0
+card_graphic = ExtResource("1_gjmd2")
+pixel_size = 0.0025
+image_offset = null
+card_name = "Scissors"
+card_description = "Scissors beat Paper.
+Rock beats Scissors."
+card_value = 0

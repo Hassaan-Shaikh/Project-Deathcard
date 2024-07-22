@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardConfig" load_steps=3 format=3 uid="uid://c4tnwcyxiivao"]
+
+[ext_resource type="Texture2D" uid="uid://coi3nv0y56gvc" path="res://icon.svg" id="1_5t45t"]
+[ext_resource type="Script" path="res://Cards/card_config.gd" id="2_xl7l8"]
+
+[resource]
+resource_name = "Rock"
+script = ExtResource("2_xl7l8")
+card_type = 0
+card_graphic = ExtResource("1_5t45t")
+pixel_size = 0.0025
+image_offset = Vector2(0, 0)
+card_name = "Rock"
+card_description = "Rock beats Scissors.
+Paper beats Rock."
+card_value = 1

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardConfig" load_steps=2 format=3 uid="uid://b1bnhgkesox2w"]
+
+[ext_resource type="Script" path="res://Cards/card_config.gd" id="1_qn33g"]
+
+[resource]
+resource_name = "Peek"
+script = ExtResource("1_qn33g")
+card_type = 1
+pixel_size = 0.0025
+image_offset = Vector2(0, 0)
+card_name = "Peek"
+card_description = "Opponent shows their current hand."
+card_value = 2

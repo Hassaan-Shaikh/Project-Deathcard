@@ -1,0 +1,83 @@
+[gd_scene load_steps=16 format=3 uid="uid://cdn7ohxc03dtl"]
+
+[ext_resource type="PackedScene" uid="uid://cmxec3oji0a6f" path="res://Cards/card.tscn" id="1_fdgmp"]
+[ext_resource type="Resource" uid="uid://dim2u5dpc35r8" path="res://Cards/TrickCardData/Replenish.tres" id="2_5e3ye"]
+[ext_resource type="Resource" uid="uid://cvdsdl81jti6e" path="res://Cards/TrickCardData/Wildcard.tres" id="2_8om87"]
+[ext_resource type="Resource" uid="uid://bsmq0p2ctyx1w" path="res://Cards/TrickCardData/Cheat.tres" id="2_46fe4"]
+[ext_resource type="Resource" uid="uid://b1bnhgkesox2w" path="res://Cards/TrickCardData/Peek.tres" id="2_af4rt"]
+[ext_resource type="Resource" uid="uid://c6js3shat1n4b" path="res://Cards/TrickCardData/Reshuffle.tres" id="2_dvhgw"]
+[ext_resource type="Resource" uid="uid://chtxxeievk3or" path="res://Cards/BasicCardData/Paper.tres" id="2_gw33l"]
+[ext_resource type="Resource" uid="uid://bq2k4x4osp4ip" path="res://Cards/TrickCardData/GoldenShot.tres" id="2_wvagk"]
+[ext_resource type="Resource" uid="uid://c4tnwcyxiivao" path="res://Cards/BasicCardData/Rock.tres" id="3_vuf0h"]
+[ext_resource type="Resource" uid="uid://brxc3lo57havh" path="res://Cards/BasicCardData/Scissors.tres" id="4_wdmiw"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o6ekl"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_fbypk"]
+sky_material = SubResource("ProceduralSkyMaterial_o6ekl")
+
+[sub_resource type="Environment" id="Environment_o6ipu"]
+background_mode = 2
+sky = SubResource("Sky_fbypk")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ntqwa"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_noln1"]
+material = SubResource("StandardMaterial3D_ntqwa")
+size = Vector2(5, 5)
+
+[node name="TestScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_o6ipu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 20.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_noln1")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 0, 1.5, 2)
+
+[node name="Card" parent="." instance=ExtResource("1_fdgmp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0.04, 1.576)
+card_config = ExtResource("3_vuf0h")
+
+[node name="Card2" parent="." instance=ExtResource("1_fdgmp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 1.57631)
+card_config = ExtResource("2_gw33l")
+
+[node name="Card3" parent="." instance=ExtResource("1_fdgmp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0.04, 1.57631)
+card_config = ExtResource("4_wdmiw")
+
+[node name="Card4" parent="." instance=ExtResource("1_fdgmp")]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -1.4, 0.360121, 1.319)
+card_config = ExtResource("2_wvagk")
+
+[node name="Card5" parent="." instance=ExtResource("1_fdgmp")]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -1.2, 0.378844, 0.615)
+card_config = ExtResource("2_46fe4")
+
+[node name="Card6" parent="." instance=ExtResource("1_fdgmp")]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 1.2, 0.378844, 0.615)
+card_config = ExtResource("2_8om87")
+
+[node name="Card7" parent="." instance=ExtResource("1_fdgmp")]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 1.4, 0.360121, 1.319)
+card_config = ExtResource("2_dvhgw")
+
+[node name="Card8" parent="." instance=ExtResource("1_fdgmp")]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -0.5, 0.378844, 0.451)
+card_config = ExtResource("2_af4rt")
+
+[node name="Card9" parent="." instance=ExtResource("1_fdgmp")]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0.5, 0.378844, 0.451)
+card_config = ExtResource("2_5e3ye")

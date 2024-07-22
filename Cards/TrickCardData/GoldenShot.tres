@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardConfig" load_steps=2 format=3 uid="uid://bq2k4x4osp4ip"]
+
+[ext_resource type="Script" path="res://Cards/card_config.gd" id="1_34ko2"]
+
+[resource]
+resource_name = "Golden Shot"
+script = ExtResource("1_34ko2")
+card_type = 1
+pixel_size = 0.0025
+image_offset = Vector2(0, 0)
+card_name = "Golden Shot"
+card_description = "Instantly shoot the opponent and continue your turn."
+card_value = 2

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardConfig" load_steps=2 format=3 uid="uid://cvdsdl81jti6e"]
+
+[ext_resource type="Script" path="res://Cards/card_config.gd" id="1_3qwuf"]
+
+[resource]
+resource_name = "Wildcard"
+script = ExtResource("1_3qwuf")
+card_type = 1
+pixel_size = 0.0025
+image_offset = Vector2(0, 0)
+card_name = "Wildcard"
+card_description = "Pick one card from five unknown cards."
+card_value = 2

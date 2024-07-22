@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardConfig" load_steps=2 format=3 uid="uid://c6js3shat1n4b"]
+
+[ext_resource type="Script" path="res://Cards/card_config.gd" id="1_q0ujm"]
+
+[resource]
+resource_name = "Reshuffle"
+script = ExtResource("1_q0ujm")
+card_type = 1
+pixel_size = 0.0025
+image_offset = Vector2(0, 0)
+card_name = "Reshuffle"
+card_description = "Replace your current hand with new cards."
+card_value = 2
