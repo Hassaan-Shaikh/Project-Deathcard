@@ -30,6 +30,10 @@ window/size/viewport_height=900
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 
+[dotnet]
+
+project/assembly_name="Project Deathcard"
+
 [file_customization]
 
 folder_colors={
